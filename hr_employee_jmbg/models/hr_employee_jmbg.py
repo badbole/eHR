@@ -8,7 +8,7 @@ class HrEmployee(models.Model):
     jmbg = fields.Char(string="JMBG")
 
     _sql_constraints = [
-        ('name_uniq', 'unique(jmbg)', 'Not valid, please try again' )
+        ('name_uniq', 'unique(jmbg)', 'JMBG already entered, no duplicates allowed!' )
          ]
 
 
