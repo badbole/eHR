@@ -2,12 +2,13 @@
 <odoo>
     <data>
         <record id="hr_employee_view_form_inherit" model="ir.ui.view">
-            <field name="hr.employee.view.form.inherit"></field>
+            <field name="name">hr.employee.view.form</field>
             <field name="model">hr.employee</field>
             <field name="inherit_id" ref="hr.view_employee_form"/>
             <field name="arch" type="xml">
-                       <field name="identification_id" position = 'after' />
-                          <field name = 'JMBG '/>
+                            <xpath expr="//field[@name='identification_id']" position="after">
+                <field name="jmbg"/>
+            </xpath>
             </field>
         </record>
     </data>
