@@ -1,4 +1,4 @@
 # -*- coding: utf-8 -*-
 
-from . import hr_employee_jmbg
+from . import hr_employee
 
