@@ -12,6 +12,8 @@ class HrEmployee(models.Model):
         ('name_uniq', 'unique(jmbg)', 'JMBG already entered, no duplicates allowed!')
     ]
 
+
+
     @api.constrains('jmbg')
     def _check_jmbg(self):
         multiply = [7,6,5,4,3,2,7,6,5,4,3,2]
@@ -33,3 +35,8 @@ class HrEmployee(models.Model):
             jmbg_valid = False
         if not jmbg_valid:
             raise ValidationError('Incorrect JMBG!')
+
+
+class EmployeeJmbg(models.Model):
+    _inherit = 'hr.employee'
+
